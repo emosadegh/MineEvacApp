@@ -13,7 +13,7 @@ using Com.Google.Maps.Android;
 
 namespace mapwithAPI
 {
-    [Activity(Label = "MainActivity", MainLauncher = true, Theme = "@style/AppTheme")]
+    [Activity(Label = "MainActivity")] // MainLauncher = true, Theme = "@style/AppTheme")]
     public class MainActivity : Activity, IOnMapReadyCallback
     {
 
@@ -35,11 +35,17 @@ namespace mapwithAPI
             btnSatellite = FindViewById<Button>(Resource.Id.btnSatellite);
             btnTerrain = FindViewById<Button>(Resource.Id.btnTerrain);
 
+            //Button btnNewActivity = FindViewById<Button>(Resource.Id.btnNewActivity); // to go back to previous acitivity
+
+
             // setup events handlers
             btnNormal.Click += BtnNormal_Click;
             btnHybrid.Click += BtnHybrid_Click;
             btnSatellite.Click += BtnSatellite_Click;
             btnTerrain.Click += BtnTerrain_Click;
+
+
+            //btnNewActivity.Click += BtnNewActivity_Click; // event handler for back activity
 
             SetUpMap();
         }
@@ -66,13 +72,20 @@ namespace mapwithAPI
         }
 
 
+        //// new button to go to new activity
+        //private void BtnNewActivity_Click(object sender, EventArgs e)
+        //{
+        //    StartActivity(typeof(NewActivity));
+        //}
+
+
         private void SetUpMap()
         {
             var mapFragment = FragmentManager.FindFragmentById<MapFragment>(Resource.Id.map_ehsan);
             mapFragment.GetMapAsync(this);
         }
 
-
+        // // ************** old version with stright line between A&B on map
         //public void OnMapReady(GoogleMap googleMap)
         //{
         //    //mMap = googleMap;

@@ -7,16 +7,12 @@
       "RelativeMoniker": "D:0:0:{926C274B-A0E3-49E1-9BE6-A5DF7B6A784C}|mapwithAPI\\mapwithAPI.csproj|solutionrelative:mapwithapi\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{926C274B-A0E3-49E1-9BE6-A5DF7B6A784C}|mapwithAPI\\mapwithAPI.csproj|d:\\mapwithapi\\mapwithapi\\properties\\androidmanifest.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{926C274B-A0E3-49E1-9BE6-A5DF7B6A784C}|mapwithAPI\\mapwithAPI.csproj|solutionrelative:mapwithapi\\properties\\androidmanifest.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{926C274B-A0E3-49E1-9BE6-A5DF7B6A784C}|mapwithAPI\\mapwithAPI.csproj|D:\\mapwithAPI\\mapwithapi\\loginactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{926C274B-A0E3-49E1-9BE6-A5DF7B6A784C}|mapwithAPI\\mapwithAPI.csproj|solutionrelative:mapwithapi\\loginactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{926C274B-A0E3-49E1-9BE6-A5DF7B6A784C}|mapwithAPI\\mapwithAPI.csproj|d:\\mapwithapi\\mapwithapi\\resources\\values\\strings.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{926C274B-A0E3-49E1-9BE6-A5DF7B6A784C}|mapwithAPI\\mapwithAPI.csproj|solutionrelative:mapwithapi\\resources\\values\\strings.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{926C274B-A0E3-49E1-9BE6-A5DF7B6A784C}|mapwithAPI\\mapwithAPI.csproj|D:\\mapwithAPI\\mapwithapi\\resources\\layout\\activity_main.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}",
-      "RelativeMoniker": "D:0:0:{926C274B-A0E3-49E1-9BE6-A5DF7B6A784C}|mapwithAPI\\mapwithAPI.csproj|solutionrelative:mapwithapi\\resources\\layout\\activity_main.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}"
+      "AbsoluteMoniker": "D:0:0:{926C274B-A0E3-49E1-9BE6-A5DF7B6A784C}|mapwithAPI\\mapwithAPI.csproj|D:\\mapwithAPI\\mapwithapi\\resources\\layout\\activity_login.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}",
+      "RelativeMoniker": "D:0:0:{926C274B-A0E3-49E1-9BE6-A5DF7B6A784C}|mapwithAPI\\mapwithAPI.csproj|solutionrelative:mapwithapi\\resources\\layout\\activity_login.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,46 +22,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "activity_main.xml",
-              "DocumentMoniker": "D:\\mapwithAPI\\mapwithAPI\\Resources\\layout\\activity_main.xml",
-              "RelativeDocumentMoniker": "mapwithAPI\\Resources\\layout\\activity_main.xml",
-              "ToolTip": "D:\\mapwithAPI\\mapwithAPI\\Resources\\layout\\activity_main.xml",
-              "RelativeToolTip": "mapwithAPI\\Resources\\layout\\activity_main.xml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2024-04-10T22:08:58.441Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "strings.xml",
-              "DocumentMoniker": "D:\\mapwithAPI\\mapwithAPI\\Resources\\values\\strings.xml",
-              "RelativeDocumentMoniker": "mapwithAPI\\Resources\\values\\strings.xml",
-              "ToolTip": "D:\\mapwithAPI\\mapwithAPI\\Resources\\values\\strings.xml",
-              "RelativeToolTip": "mapwithAPI\\Resources\\values\\strings.xml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAjAAAA",
+              "Title": "activity_login.xml",
+              "DocumentMoniker": "D:\\mapwithAPI\\mapwithAPI\\Resources\\layout\\activity_login.xml",
+              "RelativeDocumentMoniker": "mapwithAPI\\Resources\\layout\\activity_login.xml",
+              "ToolTip": "D:\\mapwithAPI\\mapwithAPI\\Resources\\layout\\activity_login.xml",
+              "RelativeToolTip": "mapwithAPI\\Resources\\layout\\activity_login.xml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2024-04-11T19:27:03.799Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-14T23:52:45.98Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AndroidManifest.xml",
-              "DocumentMoniker": "D:\\mapwithAPI\\mapwithAPI\\Properties\\AndroidManifest.xml",
-              "RelativeDocumentMoniker": "mapwithAPI\\Properties\\AndroidManifest.xml",
-              "ToolTip": "D:\\mapwithAPI\\mapwithAPI\\Properties\\AndroidManifest.xml",
-              "RelativeToolTip": "mapwithAPI\\Properties\\AndroidManifest.xml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2024-04-11T19:26:49.516Z",
-              "EditorCaption": ""
+              "Title": "LoginActivity.cs",
+              "DocumentMoniker": "D:\\mapwithAPI\\mapwithAPI\\LoginActivity.cs",
+              "RelativeDocumentMoniker": "mapwithAPI\\LoginActivity.cs",
+              "ToolTip": "D:\\mapwithAPI\\mapwithAPI\\LoginActivity.cs",
+              "RelativeToolTip": "mapwithAPI\\LoginActivity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAABXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T21:50:53.826Z"
             },
             {
               "$type": "Document",
@@ -75,7 +55,7 @@
               "RelativeDocumentMoniker": "mapwithAPI\\MainActivity.cs",
               "ToolTip": "D:\\mapwithAPI\\mapwithAPI\\MainActivity.cs",
               "RelativeToolTip": "mapwithAPI\\MainActivity.cs",
-              "ViewState": "AQIAAIsAAABAZGZmZqYowJYAAABjAAAA",
+              "ViewState": "AQIAAIcAAAAAAAAAAAAmwJ4AAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-10T21:44:57.263Z",
               "EditorCaption": ""

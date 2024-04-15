@@ -1,3 +1,6 @@
+mapwithAPI.LoginActivity, mapwithAPI;crc64fc9c2738a27453f0.LoginActivity
+mapwithAPI.LoginActivity;crc64fc9c2738a27453f0.LoginActivity
+mapwithapi.LoginActivity;crc64fc9c2738a27453f0.LoginActivity
 mapwithAPI.MainActivity, mapwithAPI;crc64fc9c2738a27453f0.MainActivity
 mapwithAPI.MainActivity;crc64fc9c2738a27453f0.MainActivity
 mapwithapi.MainActivity;crc64fc9c2738a27453f0.MainActivity
