@@ -38,10 +38,10 @@ public final class R {
 		public static final int androidx_window_activity_scope = 0x7f080053;
 		public static final int bottomToTop = 0x7f080066;
 		public static final int locale = 0x7f08010a;
-		public static final int ltr = 0x7f08010d;
-		public static final int never = 0x7f080154;
-		public static final int rtl = 0x7f080190;
-		public static final int topToBottom = 0x7f0801f6;
+		public static final int ltr = 0x7f08010e;
+		public static final int never = 0x7f080155;
+		public static final int rtl = 0x7f080191;
+		public static final int topToBottom = 0x7f0801f7;
 	}
 	public static final class styleable {
 		public static final int[] ActivityFilter = new int[] { 0x7f030027, 0x7f030029 };
