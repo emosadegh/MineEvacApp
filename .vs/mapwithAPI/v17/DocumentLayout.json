@@ -1,12 +1,99 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\mapwithAPI\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{926C274B-A0E3-49E1-9BE6-A5DF7B6A784C}|mapwithAPI\\mapwithAPI.csproj|d:\\mapwithapi\\mapwithapi\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{926C274B-A0E3-49E1-9BE6-A5DF7B6A784C}|mapwithAPI\\mapwithAPI.csproj|solutionrelative:mapwithapi\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\mapwithAPI\\mapwithAPI\\obj\\Debug\\130\\android\\src\\com\\companyname\\googlemappage\\R.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:mapwithAPI\\obj\\Debug\\130\\android\\src\\com\\companyname\\googlemappage\\R.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|mapwithAPI||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{926C274B-A0E3-49E1-9BE6-A5DF7B6A784C}|mapwithAPI\\mapwithAPI.csproj|D:\\mapwithAPI\\mapwithapi\\properties\\androidmanifest.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{926C274B-A0E3-49E1-9BE6-A5DF7B6A784C}|mapwithAPI\\mapwithAPI.csproj|solutionrelative:mapwithapi\\properties\\androidmanifest.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{926C274B-A0E3-49E1-9BE6-A5DF7B6A784C}|mapwithAPI\\mapwithAPI.csproj|D:\\mapwithAPI\\mapwithapi\\loginactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{926C274B-A0E3-49E1-9BE6-A5DF7B6A784C}|mapwithAPI\\mapwithAPI.csproj|solutionrelative:mapwithapi\\loginactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "R.java",
+              "DocumentMoniker": "D:\\mapwithAPI\\mapwithAPI\\obj\\Debug\\130\\android\\src\\com\\companyname\\googlemappage\\R.java",
+              "RelativeDocumentMoniker": "mapwithAPI\\obj\\Debug\\130\\android\\src\\com\\companyname\\googlemappage\\R.java",
+              "ToolTip": "D:\\mapwithAPI\\mapwithAPI\\obj\\Debug\\130\\android\\src\\com\\companyname\\googlemappage\\R.java",
+              "RelativeToolTip": "mapwithAPI\\obj\\Debug\\130\\android\\src\\com\\companyname\\googlemappage\\R.java",
+              "ViewState": "AQIAAOWqAAAAAAAAAAAnwPmqAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001630|",
+              "WhenOpened": "2024-04-20T00:15:26.105Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "mapwithAPI",
+              "DocumentMoniker": "D:\\mapwithAPI\\mapwithAPI\\mapwithAPI.csproj",
+              "RelativeDocumentMoniker": "mapwithAPI\\mapwithAPI.csproj",
+              "ToolTip": "D:\\mapwithAPI\\mapwithAPI\\mapwithAPI.csproj",
+              "RelativeToolTip": "mapwithAPI\\mapwithAPI.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-04-19T22:47:27.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AndroidManifest.xml",
+              "DocumentMoniker": "D:\\mapwithAPI\\mapwithAPI\\Properties\\AndroidManifest.xml",
+              "RelativeDocumentMoniker": "mapwithAPI\\Properties\\AndroidManifest.xml",
+              "ToolTip": "D:\\mapwithAPI\\mapwithAPI\\Properties\\AndroidManifest.xml",
+              "RelativeToolTip": "mapwithAPI\\Properties\\AndroidManifest.xml",
+              "ViewState": "AQIAAAcAAADAZGZmZuYswBkAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2024-04-19T20:00:30.517Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginActivity.cs",
+              "DocumentMoniker": "D:\\mapwithAPI\\mapwithAPI\\LoginActivity.cs",
+              "RelativeDocumentMoniker": "mapwithAPI\\LoginActivity.cs",
+              "ToolTip": "D:\\mapwithAPI\\mapwithAPI\\LoginActivity.cs",
+              "RelativeToolTip": "mapwithAPI\\LoginActivity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-17T19:16:03.502Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainActivity.cs",
+              "DocumentMoniker": "D:\\mapwithAPI\\mapwithAPI\\MainActivity.cs",
+              "RelativeDocumentMoniker": "mapwithAPI\\MainActivity.cs",
+              "ToolTip": "D:\\mapwithAPI\\mapwithAPI\\MainActivity.cs",
+              "RelativeToolTip": "mapwithAPI\\MainActivity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-17T17:41:09.739Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

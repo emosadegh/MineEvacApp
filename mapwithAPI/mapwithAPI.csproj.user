@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <SelectedDevice>nexus_6_-_api_28</SelectedDevice>
+    <SelectedDevice>tablet_h-dpi_13_5in_-_api_29</SelectedDevice>
     <SelectedPlatformGroup>Emulator</SelectedPlatformGroup>
-    <ActiveDebugProfile>Nexus 6 - API 28 %28Android 9.0 - API 28%29</ActiveDebugProfile>
-    <DefaultDevice>nexus_6_-_api_28</DefaultDevice>
+    <ActiveDebugProfile>Tablet H-DPI 13.5in - API 29 %28Android 10.0 - API 29%29</ActiveDebugProfile>
+    <DefaultDevice>tablet_h-dpi_13_5in_-_api_29</DefaultDevice>
     <AndroidDesignerPreferredTheme>AppTheme</AndroidDesignerPreferredTheme>
     <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
   </PropertyGroup>

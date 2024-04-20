@@ -68,22 +68,22 @@ public final class R {
 		public static final int common_google_signin_btn_text_light_normal = 0x7f070095;
 	}
 	public static final class id {
-		public static final int adjust_height = 0x7f080049;
-		public static final int adjust_width = 0x7f08004a;
-		public static final int amu_text = 0x7f080052;
-		public static final int auto = 0x7f08005b;
-		public static final int dark = 0x7f08009d;
+		public static final int adjust_height = 0x7f080048;
+		public static final int adjust_width = 0x7f080049;
+		public static final int amu_text = 0x7f080051;
+		public static final int auto = 0x7f08005a;
+		public static final int dark = 0x7f08009e;
 		public static final int hybrid = 0x7f0800ec;
 		public static final int icon_only = 0x7f0800ef;
 		public static final int light = 0x7f080104;
-		public static final int none = 0x7f08015a;
-		public static final int normal = 0x7f08015b;
-		public static final int satellite = 0x7f080192;
-		public static final int standard = 0x7f0801c4;
-		public static final int terrain = 0x7f0801df;
-		public static final int webview = 0x7f08020f;
-		public static final int wide = 0x7f080211;
-		public static final int window = 0x7f080212;
+		public static final int none = 0x7f080158;
+		public static final int normal = 0x7f080159;
+		public static final int satellite = 0x7f080190;
+		public static final int standard = 0x7f0801c2;
+		public static final int terrain = 0x7f0801dc;
+		public static final int webview = 0x7f08020c;
+		public static final int wide = 0x7f08020e;
+		public static final int window = 0x7f08020f;
 	}
 	public static final class integer {
 		public static final int google_play_services_version = 0x7f090008;
@@ -134,9 +134,9 @@ public final class R {
 		public static final int common_signin_button_text_long = 0x7f100041;
 	}
 	public static final class style {
-		public static final int amu_Bubble_TextAppearance_Dark = 0x7f110461;
-		public static final int amu_Bubble_TextAppearance_Light = 0x7f110462;
-		public static final int amu_ClusterIcon_TextAppearance = 0x7f110463;
+		public static final int amu_Bubble_TextAppearance_Dark = 0x7f11045c;
+		public static final int amu_Bubble_TextAppearance_Light = 0x7f11045d;
+		public static final int amu_ClusterIcon_TextAppearance = 0x7f11045e;
 	}
 	public static final class styleable {
 		public static final int[] LoadingImageView = new int[] { 0x7f0300de, 0x7f030242, 0x7f030243 };

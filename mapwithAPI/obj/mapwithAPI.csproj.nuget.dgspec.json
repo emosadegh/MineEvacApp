@@ -43,6 +43,10 @@
       "frameworks": {
         "monoandroid13.0": {
           "dependencies": {
+            "Microsoft.Data.Sqlite.Core": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
@@ -51,33 +55,13 @@
               "target": "Package",
               "version": "[0.5.0, )"
             },
-            "Xamarin.Android.Support.v7.AppCompat": {
+            "Xamarin.Android.Support.Compat": {
               "target": "Package",
               "version": "[28.0.0.3, )"
-            },
-            "Xamarin.AndroidX.AppCompat": {
-              "target": "Package",
-              "version": "[1.6.1.7, )"
-            },
-            "Xamarin.AndroidX.AppCompat.AppCompatResources": {
-              "target": "Package",
-              "version": "[1.6.1.8, )"
-            },
-            "Xamarin.AndroidX.AppCompat.Resources": {
-              "target": "Package",
-              "version": "[1.1.0.3, )"
             },
             "Xamarin.AndroidX.Legacy.Support.Core.UI": {
               "target": "Package",
               "version": "[1.0.0.24, )"
-            },
-            "Xamarin.AndroidX.Legacy.Support.V4": {
-              "target": "Package",
-              "version": "[1.0.0.23, )"
-            },
-            "Xamarin.AndroidX.Lifecycle.LiveData": {
-              "target": "Package",
-              "version": "[2.7.0.1, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",
@@ -87,6 +71,14 @@
               "target": "Package",
               "version": "[1.10.0.3, )"
             },
+            "Xamarin.GooglePlayServices.Base": {
+              "target": "Package",
+              "version": "[118.2.0.6, )"
+            },
+            "Xamarin.GooglePlayServices.Basement": {
+              "target": "Package",
+              "version": "[118.2.0.6, )"
+            },
             "Xamarin.GooglePlayServices.Location": {
               "target": "Package",
               "version": "[121.0.1.5, )"
@@ -94,6 +86,10 @@
             "Xamarin.GooglePlayServices.Maps": {
               "target": "Package",
               "version": "[118.2.0.2, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.9.172, )"
             }
           }
         }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout 
+<RelativeLayout 
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -11,12 +11,37 @@
         android:name="com.google.android.gms.maps.MapFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/buttons_layout"
         android:layout_weight="9"/>
+
+
+    <Button
+        android:id="@+id/btnStartGps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Start GPS"/>
+
+    <!-- Save Location Button -->
+    <Button
+        android:id="@+id/btnPlotGpsHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnStartGps"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Plot History"/>
+
 
     <!-- Buttons Row -->
     <LinearLayout
+        android:id="@+id/buttons_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:orientation="horizontal">
 
         <!-- Normal Button -->
@@ -53,4 +78,4 @@
 
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>
