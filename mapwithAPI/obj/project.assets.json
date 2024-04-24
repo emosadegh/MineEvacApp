@@ -5211,43 +5211,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\emosadegh\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/Users/ehsanmosadegh/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\mapwithAPI\\mapwithAPI\\mapwithAPI.csproj",
+      "projectUniqueName": "/Users/ehsanmosadegh/android_app_mine/MineEvacApp-main/mapwithAPI/mapwithAPI.csproj",
       "projectName": "mapwithAPI",
-      "projectPath": "D:\\mapwithAPI\\mapwithAPI\\mapwithAPI.csproj",
-      "packagesPath": "C:\\Users\\emosadegh\\.nuget\\packages\\",
-      "outputPath": "D:\\mapwithAPI\\mapwithAPI\\obj\\",
+      "projectPath": "/Users/ehsanmosadegh/android_app_mine/MineEvacApp-main/mapwithAPI/mapwithAPI.csproj",
+      "packagesPath": "/Users/ehsanmosadegh/.nuget/packages/",
+      "outputPath": "/Users/ehsanmosadegh/android_app_mine/MineEvacApp-main/mapwithAPI/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\emosadegh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/ehsanmosadegh/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "monoandroid13.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "monoandroid13.0": {
           "projectReferences": {}
         }
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {

@@ -1,0 +1,21 @@
+﻿<Properties StartupConfiguration="{926C274B-A0E3-49E1-9BE6-A5DF7B6A784C}|Default">
+  <MonoDevelop.Ide.ItemProperties.mapwithAPI PreferredExecutionTarget="Android.5200218bd85f7669" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="mapwithAPI">
+            <Node name="mapwithAPI" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.5200218bd85f7669" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>

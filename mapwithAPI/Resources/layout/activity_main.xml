@@ -10,30 +10,33 @@
         android:id="@+id/map_ehsan"
         android:name="com.google.android.gms.maps.MapFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_above="@+id/buttons_layout"
         android:layout_weight="9"/>
 
 
+
+     <!-- Start GPS Button -->
     <Button
         android:id="@+id/btnStartGps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Start GPS"/>
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="60dp"
+        android:text="Start GPS" />
 
-    <!-- Save Location Button -->
+    <!-- Plot History Button -->
     <Button
         android:id="@+id/btnPlotGpsHistory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/btnStartGps"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Plot History"/>
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="8dp"
+        android:text=" Plot GPS  " />
+
 
 
     <!-- Buttons Row -->
