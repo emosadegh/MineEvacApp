@@ -4,15 +4,15 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="mapwithAPI/MainActivity.cs">
-    <Files>
-      <File FileName="mapwithAPI/MainActivity.cs" Line="339" Column="1" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="mapwithAPI" expanded="True">
-            <Node name="mapwithAPI" expanded="True" />
+            <Node name="mapwithAPI">
+              <Node name="Properties" expanded="True" />
+              <Node name="MainActivity.cs" selected="True" />
+            </Node>
           </Node>
         </State>
       </Pad>

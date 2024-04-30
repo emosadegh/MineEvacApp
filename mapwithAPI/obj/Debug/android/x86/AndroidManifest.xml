@@ -24,7 +24,7 @@
   </queries>
   <permission android:name="com.companyname.googlemappage.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature" />
   <uses-permission android:name="com.companyname.googlemappage.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-  <application android:name="androidx.multidex.MultiDexApplication" android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:debuggable="true" android:extractNativeLibs="true" android:icon="@mipmap/mine_icon" android:label="@string/app_name">
+  <application android:name="androidx.multidex.MultiDexApplication" android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:debuggable="true" android:extractNativeLibs="true" android:icon="@mipmap/mine_app_icon" android:label="MineEvacEhsan">
     <activity android:name="com.companyname.googlemappage.MainActivity" android:label="@string/app_name" android:theme="@style/AppTheme">
       <!-- Other activity attributes -->
     </activity>
@@ -34,13 +34,13 @@
     <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="@string/google_maps_key" />
     <!-- Necessary for apps that target Android 9.0 or higher -->
     <uses-library android:name="org.apache.http.legacy" android:required="false" />
-    <activity android:name="crc64fc9c2738a27453f0.LoginActivity" android:exported="true" android:label="LoginActivity" android:theme="@style/AppTheme">
+    <activity android:name="crc64fc9c2738a27453f0.LoginActivity" android:exported="true" android:label="MineEvac" android:theme="@style/AppTheme">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity android:name="crc64fc9c2738a27453f0.MainActivity" android:label="MainActivity" />
+    <activity android:name="crc64fc9c2738a27453f0.MainActivity" android:label="Home" />
     <provider android:name="mono.android.MultiDexLoader" android:authorities="com.companyname.googlemappage.mono.android.MultiDexLoader.__mono_init__" android:exported="false" android:initOrder="1999999999" />
     <provider android:name="mono.MonoRuntimeProvider" android:authorities="com.companyname.googlemappage.mono.MonoRuntimeProvider.__mono_init__" android:exported="false" android:initOrder="1999999998" />
     <provider android:name="androidx.startup.InitializationProvider" android:authorities="com.companyname.googlemappage.androidx-startup" android:exported="false" tools:node="merge">

@@ -4,7 +4,7 @@ using Android.Widget;
 
 namespace mapwithAPI
 {
-    [Activity(Label = "LoginActivity", MainLauncher = true, Theme = "@style/AppTheme")]
+    [Activity(Label = "MineEvac", MainLauncher = true, Theme = "@style/AppTheme")]
     public class LoginActivity : Activity
     {
         private EditText logInEmail;
@@ -27,7 +27,7 @@ namespace mapwithAPI
 
         private void BtnLogin_Click(object sender, System.EventArgs e)
         {
-            // TODO: Implement your login logic here
+            // TO-DO: Implement your login logic here
             string inemail = logInEmail.Text;
             string inpassword = logInPassword.Text;
 
