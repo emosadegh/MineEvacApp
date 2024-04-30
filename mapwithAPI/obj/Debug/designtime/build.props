@@ -25,11 +25,11 @@ androidgeneratejnimarshalmethods=false
 os=unix
 androidincludedebugsymbols=true
 androidpackagenamingpolicy=lowercasecrc64
-_nugetassetstimestamp=638493866467021214
+_nugetassetstimestamp=638495546247380248
 typemapkind=strings-asm
 androidsupportedabis=arm64-v8a
 armeabi-v7a
 x86
 x86_64
 androidmanifestplaceholders=
-projectfullpath=/users/ehsanmosadegh/android_app_mine/mineevacapp-main/mapwithapi/mapwithapi.csproj
+projectfullpath=/users/ehsanmosadegh/android_app_mining/mineevacapp/mapwithapi/mapwithapi.csproj

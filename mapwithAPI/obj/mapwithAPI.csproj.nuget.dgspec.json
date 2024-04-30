@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ehsanmosadegh/android_app_mine/MineEvacApp-main/mapwithAPI/mapwithAPI.csproj": {}
+    "/Users/ehsanmosadegh/android_app_mining/MineEvacApp/mapwithAPI/mapwithAPI.csproj": {}
   },
   "projects": {
-    "/Users/ehsanmosadegh/android_app_mine/MineEvacApp-main/mapwithAPI/mapwithAPI.csproj": {
+    "/Users/ehsanmosadegh/android_app_mining/MineEvacApp/mapwithAPI/mapwithAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ehsanmosadegh/android_app_mine/MineEvacApp-main/mapwithAPI/mapwithAPI.csproj",
+        "projectUniqueName": "/Users/ehsanmosadegh/android_app_mining/MineEvacApp/mapwithAPI/mapwithAPI.csproj",
         "projectName": "mapwithAPI",
-        "projectPath": "/Users/ehsanmosadegh/android_app_mine/MineEvacApp-main/mapwithAPI/mapwithAPI.csproj",
+        "projectPath": "/Users/ehsanmosadegh/android_app_mining/MineEvacApp/mapwithAPI/mapwithAPI.csproj",
         "packagesPath": "/Users/ehsanmosadegh/.nuget/packages/",
-        "outputPath": "/Users/ehsanmosadegh/android_app_mine/MineEvacApp-main/mapwithAPI/obj/",
+        "outputPath": "/Users/ehsanmosadegh/android_app_mining/MineEvacApp/mapwithAPI/obj/",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [

@@ -1,9 +1,3 @@
-mapwithAPI.LoginActivity, mapwithAPI;crc64fc9c2738a27453f0.LoginActivity
-mapwithAPI.LoginActivity;crc64fc9c2738a27453f0.LoginActivity
-mapwithapi.LoginActivity;crc64fc9c2738a27453f0.LoginActivity
-mapwithAPI.MainActivity, mapwithAPI;crc64fc9c2738a27453f0.MainActivity
-mapwithAPI.MainActivity;crc64fc9c2738a27453f0.MainActivity
-mapwithapi.MainActivity;crc64fc9c2738a27453f0.MainActivity
 Android.Gms.Common.Internal.SafeParcel.ISafeParcelable, Xamarin.GooglePlayServices.Basement;com.google.android.gms.common.internal.safeparcel.SafeParcelable
 Android.Gms.Common.Internal.SafeParcel.ISafeParcelable;com.google.android.gms.common.internal.safeparcel.SafeParcelable
 com.google.android.gms.common.internal.safeparcel.SafeParcelable;com.google.android.gms.common.internal.safeparcel.SafeParcelable
@@ -187,3 +181,9 @@ com.google.android.gms.tasks.SuccessContinuation;com.google.android.gms.tasks.Su
 Android.Gms.Extensions.AwaitableTaskCompleteListener`1, Xamarin.GooglePlayServices.Tasks;crc6495d4f5d63cc5c882.AwaitableTaskCompleteListener_1
 Android.Gms.Extensions.AwaitableTaskCompleteListener`1;crc6495d4f5d63cc5c882.AwaitableTaskCompleteListener_1
 android.gms.extensions.AwaitableTaskCompleteListener_1;crc6495d4f5d63cc5c882.AwaitableTaskCompleteListener_1
+mapwithAPI.LoginActivity, mapwithAPI;crc64fc9c2738a27453f0.LoginActivity
+mapwithAPI.LoginActivity;crc64fc9c2738a27453f0.LoginActivity
+mapwithapi.LoginActivity;crc64fc9c2738a27453f0.LoginActivity
+mapwithAPI.MainActivity, mapwithAPI;crc64fc9c2738a27453f0.MainActivity
+mapwithAPI.MainActivity;crc64fc9c2738a27453f0.MainActivity
+mapwithapi.MainActivity;crc64fc9c2738a27453f0.MainActivity

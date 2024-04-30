@@ -77,6 +77,7 @@ namespace mapwithAPI
             }
 
 
+
             // get a reference of buttons - wire UI to back code
             btnNormal = FindViewById<Button>(Resource.Id.btnNormal);
             btnHybrid = FindViewById<Button>(Resource.Id.btnHybrid);
@@ -100,7 +101,82 @@ namespace mapwithAPI
             btnStartGps.Click += BtnStartGps_Click; // start button
 
 
-            SetUpMap();
+            //SetUpMap();
+
+            checkLocationPermission(); // myself - first thing 
+
+
+        }
+
+
+        //***************************** check location permission *****************************
+
+        private void checkLocationPermission() // request access to fine and coarse locations
+        {
+            if (CheckSelfPermission(Android.Manifest.Permission.AccessFineLocation) == Android.Content.PM.Permission.Granted &&
+                CheckSelfPermission(Android.Manifest.Permission.AccessCoarseLocation) == Android.Content.PM.Permission.Granted)
+            {
+
+                // Create a Toast with a short duration and the message
+                Toast.MakeText(this, "Location permission is ON!", ToastLength.Short).Show();
+
+                //mMap.MyLocationEnabled = true;
+                SetUpMap();
+
+
+                // Permission is not granted, request it
+                //RequestPermissions(new string[] { Android.Manifest.Permission.AccessFineLocation }, RequestLocationId);
+            }
+
+            else
+            {
+                // Permission is not granted, request it
+                // Request permissions if not granted
+                RequestPermissions(new string[]
+                {
+                    Android.Manifest.Permission.AccessFineLocation,
+                    Android.Manifest.Permission.AccessCoarseLocation
+                },  RequestLocationId);
+
+                //RequestPermissions(new string[] { Android.Manifest.Permission.AccessCoarseLocation }, RequestLocationId);
+            }
+
+        }
+
+
+
+        //********************** method to handle the user's response to the permission request ************************
+
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
+        {
+            switch (requestCode)
+            {
+                case RequestLocationId:
+                    {
+                        //if (grantResults[0] == Android.Content.PM.Permission.Granted)
+                        if (grantResults.Length > 0 && grantResults[0] == Android.Content.PM.Permission.Granted)
+
+                        {
+                            // Permission granted,
+                            // Permission granted, enable My Location
+                            //mMap.MyLocationEnabled = true;
+
+                            SetUpMap();
+
+                            //InitializeLocationManager();
+
+
+                        }
+                        else
+                        {
+                            // Permission denied
+                            // Handle permission denied case
+                            Toast.MakeText(this, "Location permission denied", ToastLength.Short).Show();
+
+                        }
+                        return;
+                    }
+            }
         }
 
 
@@ -115,8 +191,7 @@ namespace mapwithAPI
 
             if (locations.Count < 2)
             {
-                // You need at least 2 points to draw a route
-                // Show a Toast/notification on screen
+                // You need at least 2 points to draw a route - Show a Toast/notification on screen
                 Toast.MakeText(this, "You need at least 2 points to draw a route", ToastLength.Short).Show();
                 return;
             }
@@ -220,59 +295,39 @@ namespace mapwithAPI
             // camera to current location()????? refresh map
             ClearGoogleMap();
 
+            //// old code - moved to another section
+            // Check if the permission is granted  --> moved to previous steps
+            //if (CheckSelfPermission(Android.Manifest.Permission.AccessFineLocation) != Android.Content.PM.Permission.Granted)
+            //{
+            //    // Permission is not granted, request it
+            //    RequestPermissions(new string[] { Android.Manifest.Permission.AccessFineLocation }, RequestLocationId);
+            //}
 
-            // Check if the permission is granted
-            if (CheckSelfPermission(Android.Manifest.Permission.AccessFineLocation) != Android.Content.PM.Permission.Granted)
-            {
-                // Permission is not granted, request it
-                RequestPermissions(new string[] { Android.Manifest.Permission.AccessFineLocation }, RequestLocationId);
-            }
-            else
-            {
-                // Permission is already granted, initialize location services
-                InitializeLocationManager();
-            }
+            //else
+            //{
+            //    // Permission is already granted, initialize location services
+            //    InitializeLocationManager();
+            //}
+
+
+            // Permission is already granted, initialize location services
+            InitializeLocationManager();
+
 
         }
 
-        //********************** ??? ************************
-
-        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
-        {
-            switch (requestCode)
-            {
-                case RequestLocationId:
-                    {
-                        if (grantResults[0] == Android.Content.PM.Permission.Granted)
-                        {
-
-                            // Permission granted, therefore start collecting GPS locations
-                            InitializeLocationManager();
-                        }
-                        else
-                        {
-                            // Permission denied
-                            // Handle permission denied case
-                        }
-                        return;
-                    }
-            }
-        }
 
 
+        // call InitializeLocationManager after permission is granted
 
         private void InitializeLocationManager()
         {
             locationManager = (LocationManager)GetSystemService(Context.LocationService);
-            locationManager.RequestLocationUpdates(LocationManager.GpsProvider, 5000, 1, this); // gps provider?
+            locationManager.RequestLocationUpdates(LocationManager.GpsProvider, 2000, 1, this); // gps provider?
         }
 
-
-        //********************** permission ************************
-
-
         public void OnLocationChanged(Android.Locations.Location location) // this function is called whenever there's a change in the device's location. This change is usually due to the GPS sensor detecting a new location.
-        {
+        { // Whenever the device's location changes and a new location update is received from the GPS provider, this f() is automatically invoked.
 
             // Create a new Location object with latitude, longitude, and timestamp
             var newLocation = new Location
@@ -284,6 +339,9 @@ namespace mapwithAPI
 
             // Insert the Location into the database
             dbConn.Insert(newLocation);
+
+
+            Toast.MakeText(this, "New location recorded!", ToastLength.Short).Show();
 
 
             //********* show new location on map every moment
@@ -319,7 +377,7 @@ namespace mapwithAPI
         }
 
 
-        //********************************
+        //******************************** Button: plot GPS locations 
 
         private void BtnPlotGpsLocation_Click(object sender, EventArgs e)
         {
@@ -354,7 +412,6 @@ namespace mapwithAPI
             // Clear existing markers
             mMap.Clear();
         }
-
 
 
 
@@ -422,20 +479,18 @@ namespace mapwithAPI
 
         }
 
-
-        //****************************************
-
         public void OnMapReady(GoogleMap googleMap) // This method is automatically called by the Android system when the map is ready to be used from SetUpMat()
         {
+
             mMap = googleMap;
 
             // Set map type
             mMap.MapType = GoogleMap.MapTypeHybrid;
 
-
-            // zoom to current location???
-            // Enable My Location layer and move the blue dot to the current location
+            //// Enable My Location layer and move the blue dot to the current location
             mMap.MyLocationEnabled = true;
+
+            //OnRequestPermissionsResult();
 
 
             // Define a LatLng object with the desired location (replace with your neighborhood's latitude and longitude)
