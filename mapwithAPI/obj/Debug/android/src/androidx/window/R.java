@@ -37,11 +37,11 @@ public final class R {
 		public static final int alwaysDisallow = 0x7f080050;
 		public static final int androidx_window_activity_scope = 0x7f080052;
 		public static final int bottomToTop = 0x7f080065;
-		public static final int locale = 0x7f08010a;
-		public static final int ltr = 0x7f08010e;
-		public static final int never = 0x7f080153;
-		public static final int rtl = 0x7f08018f;
-		public static final int topToBottom = 0x7f0801f4;
+		public static final int locale = 0x7f08010b;
+		public static final int ltr = 0x7f08010f;
+		public static final int never = 0x7f080154;
+		public static final int rtl = 0x7f080190;
+		public static final int topToBottom = 0x7f0801f5;
 	}
 	public static final class styleable {
 		public static final int[] ActivityFilter = new int[] { 0x7f030027, 0x7f030029 };

@@ -44,6 +44,7 @@
     <AndroidCreatePackagePerAbi>true</AndroidCreatePackagePerAbi>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
+    <MandroidI18n>west</MandroidI18n>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -66,6 +67,7 @@
     <Reference Include="Mono.Android" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors" />
+    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LoginActivity.cs" />
@@ -75,6 +77,8 @@
       <SubType></SubType>
       <Generator></Generator>
     </Compile>
+    <Compile Include="AWSdbPyRunScript.cs" />
+    <Compile Include="DatabaseManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -145,12 +149,27 @@
     <PackageReference Include="Xamarin.GooglePlayServices.Maps">
       <Version>118.2.0.2</Version>
     </PackageReference>
+    <PackageReference Include="AWSSDK.Core">
+      <Version>3.7.303.26</Version>
+    </PackageReference>
+    <PackageReference Include="pythonnet">
+      <Version>3.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.MySql.Data">
+      <Version>1.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="MySqlConnector">
+      <Version>2.3.7</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\activity_login.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\app_logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="awsdb.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

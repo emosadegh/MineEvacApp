@@ -32,9 +32,17 @@
       "frameworks": {
         "monoandroid13.0": {
           "dependencies": {
+            "AWSSDK.Core": {
+              "target": "Package",
+              "version": "[3.7.303.26, )"
+            },
             "Microsoft.Data.Sqlite.Core": {
               "target": "Package",
               "version": "[8.0.4, )"
+            },
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[2.3.7, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -75,6 +83,14 @@
             "Xamarin.GooglePlayServices.Maps": {
               "target": "Package",
               "version": "[118.2.0.2, )"
+            },
+            "Xamarin.MySql.Data": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "pythonnet": {
+              "target": "Package",
+              "version": "[3.0.3, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",

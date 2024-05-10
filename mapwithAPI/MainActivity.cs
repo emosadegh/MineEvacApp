@@ -23,95 +23,264 @@ using Android.Graphics;
 //using Android.Support.Multidex;
 //using Android.Support.V7.App;
 //using AndroidX.AppCompat.App;
-
+using MySql.Data.MySqlClient;
+using mapwithAPI; // Importing your custom namespace if needed
 
 
 
 namespace mapwithAPI
-    {
+{
         [Activity(Label = "Home")]
         public class MainActivity : Activity, IOnMapReadyCallback, Android.Locations.ILocationListener
         {
 
-            // define buttons as global
-            private GoogleMap mMap; //global variable
-            private Button btnNormal;
-            private Button btnHybrid;
-            private Button btnSatellite;
-            private Button btnTerrain;
+        // define buttons as global
+        private GoogleMap mMap; //global variable
+        private Button btnNormal;
+        private Button btnHybrid;
+        private Button btnSatellite;
+        private Button btnTerrain;
 
 
-            // for GPS location functionality
-            private SQLiteConnection dbConn;
-            private Button btnPlotGpsLocation;
-            private Button btnStartGps;
+        // for GPS location functionality and upload to AWS
+        private SQLiteConnection dbConn;
+        private Button btnPlotGpsLocation;
+        private Button btnStartGps;
 
-            private LocationManager locationManager;
-            private Android.Gms.Location.LocationRequest locationRequest;
-            //private Timer locationTimer;
-            const int RequestLocationId = 0;
-
+        private LocationManager locationManager;
+        private Android.Gms.Location.LocationRequest locationRequest;
+        private Button btnPushToAWS;
 
 
+        //private Timer locationTimer;
+        const int RequestLocationId = 0;
 
-            protected override void OnCreate(Bundle savedInstanceState)
+
+        // Define your AWS RDS MySQL database connection string
+        private string awsConnectionString = "Server=minevacdb.c3qiqwiw2zt9.us-west-1.rds.amazonaws.com;" +
+                                                "Port=3306;";
+                                                //"Database=mineevac;";
+                                                //"Uid=admin;" +
+                                                //"Pwd=mine2024;";
+
+
+
+
+        protected override void OnCreate(Bundle savedInstanceState)
             {
 
-                base.OnCreate(savedInstanceState);
-                SetContentView(Resource.Layout.activity_main);
+            base.OnCreate(savedInstanceState);
+            SetContentView(Resource.Layout.activity_main);
 
 
-                // Initialize SQLite database
-                string dbPath = System.IO.Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "locations.db3");
-                dbConn = new SQLiteConnection(dbPath); // connection stablished here
+            // Initialize SQLite database
+            string dbPath = System.IO.Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "locations.db3");
+            dbConn = new SQLiteConnection(dbPath); // connection stablished here
 
 
-                // Create table
+            // Create table
+            dbConn.CreateTable<Location>();
+
+
+            if (!dbConn.TableMappings.Any(m => m.MappedType.Name == typeof(Location).Name))
+            {
                 dbConn.CreateTable<Location>();
-
-
-                if (!dbConn.TableMappings.Any(m => m.MappedType.Name == typeof(Location).Name))
-                {
-                    dbConn.CreateTable<Location>();
-                    Log.Debug("DB_INIT", "Location table created");
-                }
-
-
-
-                // get a reference of buttons - wire UI to back code
-                btnNormal = FindViewById<Button>(Resource.Id.btnNormal);
-                btnHybrid = FindViewById<Button>(Resource.Id.btnHybrid);
-                btnSatellite = FindViewById<Button>(Resource.Id.btnSatellite);
-                btnTerrain = FindViewById<Button>(Resource.Id.btnTerrain);
-
-
-                // setup events handlers
-                btnNormal.Click += BtnNormal_Click;
-                btnHybrid.Click += BtnHybrid_Click;
-                btnSatellite.Click += BtnSatellite_Click;
-                btnTerrain.Click += BtnTerrain_Click;
-
-
-                // plot GPS history data
-                btnPlotGpsLocation = FindViewById<Button>(Resource.Id.btnPlotGpsHistory);
-                btnPlotGpsLocation.Click += BtnPlotGpsLocation_Click; // event handler for GPS location 
-
-                // start GPS button
-                btnStartGps = FindViewById<Button>(Resource.Id.btnStartGps);
-                btnStartGps.Click += BtnStartGps_Click; // start button
-
-
-                //SetUpMap();
-
-                checkLocationPermission(); // myself - first thing 
-
-
+                Log.Debug("DB_INIT", "Location table created");
             }
 
 
-            //***************************** check location permission *****************************
 
-            private void checkLocationPermission() // request access to fine and coarse locations
+            // get a reference of buttons - wire UI to back code
+            btnNormal = FindViewById<Button>(Resource.Id.btnNormal);
+            btnHybrid = FindViewById<Button>(Resource.Id.btnHybrid);
+            btnSatellite = FindViewById<Button>(Resource.Id.btnSatellite);
+            btnTerrain = FindViewById<Button>(Resource.Id.btnTerrain);
+
+
+            // setup events handlers
+            btnNormal.Click += BtnNormal_Click;
+            btnHybrid.Click += BtnHybrid_Click;
+            btnSatellite.Click += BtnSatellite_Click;
+            btnTerrain.Click += BtnTerrain_Click;
+
+
+            // plot GPS history data
+            btnPlotGpsLocation = FindViewById<Button>(Resource.Id.btnPlotGpsHistory);
+            btnPlotGpsLocation.Click += BtnPlotGpsLocation_Click; // event handler for GPS location 
+
+            // start GPS button
+            btnStartGps = FindViewById<Button>(Resource.Id.btnStartGps);
+            btnStartGps.Click += BtnStartGps_Click; // start button
+
+
+            //SetUpMap();
+
+            checkLocationPermission(); // myself - first thing 
+
+
+
+            // ------- push to AWS button ----------
+            // add a new button for submitting GPS data in SQL to AWS
+            btnPushToAWS = FindViewById<Button>(Resource.Id.btnUploadGpsToAws);
+            btnPushToAWS.Click += BtnPushToAWS_Click;
+
+
+        }
+
+
+        //***************************** start/ connect to AWS ***********************************
+
+        // event handler for puth to AWS
+        private async void BtnPushToAWS_Click(object sender, EventArgs e)
+        {
+
+            ////------ Execute Python script using PythonScriptExecutor
+            //AWSdbPyRunScript awsdbPyRunScript = new AWSdbPyRunScript();
+
+            //awsdbPyRunScript.ExecutePyScript("awsdb"); // Pass the name of your Python script file without the ".py" extension
+
+
+
+
+
+            //************ old with C# **************
+            //connectToAWS();
+
+            // Create a MySqlConnection object with your connection string
+            MySqlConnection awsConn = new MySqlConnection(awsConnectionString);
+
+            try
+            {
+                // Open the database connection asynchronously
+                await awsConn.OpenAsync();
+
+                Console.WriteLine("Connection successful!");
+
+                // Connection is established, show toast message
+                Toast.MakeText(this, "Connection to AWS RDS database established", ToastLength.Short).Show();
+
+                // Wait for 5 seconds
+                Task.Delay(5000);
+
+            }
+
+            catch (Exception ex)
+            {
+                // Handle any exceptions that occur during connection
+                string errorMessage = "*** Error connecting to AWS RDS database: " + ex.Message;
+
+                if (ex.InnerException != null)
+                {
+                    errorMessage += "\nInner Exception: " + ex.InnerException.Message;
+                }
+
+                Toast.MakeText(this, errorMessage, ToastLength.Long).Show();
+
+                Console.WriteLine("Error connecting to AWS RDS: " + ex.Message);
+
+
+                //// Handle any exceptions that occur during connection
+                //Toast.MakeText(this, "*** Error connecting to AWS RDS database: " + ex.Message, ToastLength.Long).Show();
+            }
+
+            finally
+            {
+                // Ensure the connection is closed after use
+                awsConn.Close();
+
+                Toast.MakeText(this, "Connection to AWS RDS database closed", ToastLength.Short).Show();
+
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+        ////DateTime dtnow = DateTime.Now;
+
+        // Create a MySqlConnection object with your connection string
+        //MySqlConnection awsConn = new MySqlConnection(awsConnectionString);
+
+        //try
+        //{
+        //    // Open the database connection asynchronously
+        //    await awsConn.OpenAsync();
+
+        //    // Connection is established, show toast message
+        //    Toast.MakeText(this, "Connection to AWS RDS MySQL database established", ToastLength.Short).Show();
+
+        //    // Wait for 5 seconds
+        //    Task.Delay(5000);
+
+
+
+
+
+        //}
+
+        //finally
+        //{
+        //    // Ensure the connection is closed after use
+        //    awsConn.Close();
+
+        //    // Display a toast message indicating the connection is closed
+        //    Toast.MakeText(this, "Connection closed", ToastLength.Short).Show();
+        //}
+
+        //// Retrieve data from SQLite
+        //var locations = dbConn.Table<Location>().ToList();
+
+        //// Insert data into AWS RDS MySQL
+        //foreach (var location in locations)
+        //{
+        //    MySqlCommand insertCommand = new MySqlCommand("INSERT INTO Location (Latitude, Longitude, Timestamp) VALUES (@Latitude, @Longitude, @Timestamp)", awsConn);
+        //    insertCommand.Parameters.AddWithValue("@Latitude", location.Latitude);
+        //    insertCommand.Parameters.AddWithValue("@Longitude", location.Longitude);
+        //    insertCommand.Parameters.AddWithValue("@Timestamp", location.Timestamp);
+        //    insertCommand.ExecuteNonQuery();
+        //}
+
+        //// Close connections
+        //awsConn.Close();
+        //dbConn.Close();
+
+
+
+        //private void connectToAWS()
+        //{
+        //    // refers to the DatabaseManager Class
+        //    DatabaseManager dbManager = new DatabaseManager();
+        //    MySqlConnection awsConn = dbManager.ConnectToDatabase();
+
+        //    if (awsConn != null)
+        //    {
+        //        // Connection successful, perform database operations
+        //        // For example, execute queries, insert/update/delete data
+        //        Toast.MakeText(this, "Connection to AWS RDS MySQL database established", ToastLength.Short).Show();
+
+        //        // Close the connection when done
+        //        dbManager.CloseConnection(awsConn);
+        //    }
+        //    else
+        //    {
+        //        // Connection failed
+        //        Toast.MakeText(this, "Failed to connect to AWS RDS MySQL database", ToastLength.Short).Show();
+        //    }
+        //}
+
+        //***************************** end/ connect to AWS ***********************************
+
+        //***************************** check location permission *****************************
+
+        private void checkLocationPermission() // request access to fine and coarse locations
             {
                 if (CheckSelfPermission(Android.Manifest.Permission.AccessFineLocation) == Android.Content.PM.Permission.Granted &&
                     CheckSelfPermission(Android.Manifest.Permission.AccessCoarseLocation) == Android.Content.PM.Permission.Granted)

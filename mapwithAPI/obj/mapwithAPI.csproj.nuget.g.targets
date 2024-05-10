@@ -79,5 +79,6 @@
     <Import Project="$(NuGetPackageRoot)xamarin.android.arch.core.common/1.1.1.3/build/monoandroid90/Xamarin.Android.Arch.Core.Common.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.android.arch.core.common/1.1.1.3/build/monoandroid90/Xamarin.Android.Arch.Core.Common.targets')" />
     <Import Project="$(NuGetPackageRoot)xamarin.android.arch.lifecycle.runtime/1.1.1.3/build/monoandroid90/Xamarin.Android.Arch.Lifecycle.Runtime.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.android.arch.lifecycle.runtime/1.1.1.3/build/monoandroid90/Xamarin.Android.Arch.Lifecycle.Runtime.targets')" />
     <Import Project="$(NuGetPackageRoot)xamarin.android.support.compat/28.0.0.3/build/monoandroid90/Xamarin.Android.Support.Compat.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.android.support.compat/28.0.0.3/build/monoandroid90/Xamarin.Android.Support.Compat.targets')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.extensions.logging.abstractions/7.0.1/buildTransitive/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.logging.abstractions/7.0.1/buildTransitive/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.targets')" />
   </ImportGroup>
 </Project>

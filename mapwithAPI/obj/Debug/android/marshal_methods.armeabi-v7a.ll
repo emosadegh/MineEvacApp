@@ -79,52 +79,66 @@ target triple = "armv7-unknown-linux-android"
 ; assembly_image_cache
 @assembly_image_cache = local_unnamed_addr global [0 x %struct.MonoImage*] zeroinitializer, align 4
 ; Each entry maps hash of an assembly name to an index into the `assembly_image_cache` array
-@assembly_image_cache_hashes = local_unnamed_addr constant [38 x i32] [
-	i32 321597661, ; 0: System.Numerics => 0x132b30dd => 6
-	i32 442521989, ; 1: Xamarin.Essentials => 0x1a605985 => 13
-	i32 465846621, ; 2: mscorlib => 0x1bc4415d => 2
-	i32 469710990, ; 3: System.dll => 0x1bff388e => 4
-	i32 748832960, ; 4: SQLitePCLRaw.batteries_v2 => 0x2ca248c0 => 10
-	i32 1098259244, ; 5: System => 0x41761b2c => 4
-	i32 1292207520, ; 6: SQLitePCLRaw.core.dll => 0x4d0585a0 => 11
-	i32 1306176955, ; 7: mapwithAPI.dll => 0x4ddaadbb => 18
-	i32 1639515021, ; 8: System.Net.Http.dll => 0x61b9038d => 5
-	i32 1776026572, ; 9: System.Core.dll => 0x69dc03cc => 3
-	i32 1867746548, ; 10: Xamarin.Essentials.dll => 0x6f538cf4 => 13
-	i32 1898885626, ; 11: mapwithAPI => 0x712eb1fa => 18
-	i32 1908813208, ; 12: Xamarin.GooglePlayServices.Basement => 0x71c62d98 => 14
-	i32 2103459038, ; 13: SQLitePCLRaw.provider.e_sqlite3.dll => 0x7d603cde => 12
-	i32 2201231467, ; 14: System.Net.Http => 0x8334206b => 5
-	i32 2465273461, ; 15: SQLitePCLRaw.batteries_v2.dll => 0x92f11675 => 10
-	i32 2475788418, ; 16: Java.Interop.dll => 0x93918882 => 0
-	i32 2905242038, ; 17: mscorlib.dll => 0xad2a79b6 => 2
-	i32 3017076677, ; 18: Xamarin.GooglePlayServices.Maps => 0xb3d4efc5 => 16
-	i32 3058099980, ; 19: Xamarin.GooglePlayServices.Tasks => 0xb646e70c => 17
-	i32 3230466174, ; 20: Xamarin.GooglePlayServices.Basement.dll => 0xc08d007e => 14
-	i32 3247949154, ; 21: Mono.Security => 0xc197c562 => 8
-	i32 3286872994, ; 22: SQLite-net.dll => 0xc3e9b3a2 => 9
-	i32 3360279109, ; 23: SQLitePCLRaw.core => 0xc849ca45 => 11
-	i32 3362522851, ; 24: Xamarin.AndroidX.Core => 0xc86c06e3 => 7
-	i32 3366347497, ; 25: Java.Interop => 0xc8a662e9 => 0
-	i32 3476120550, ; 26: Mono.Android => 0xcf3163e6 => 1
-	i32 3494395880, ; 27: Xamarin.GooglePlayServices.Location.dll => 0xd0483fe8 => 15
-	i32 3672681054, ; 28: Mono.Android.dll => 0xdae8aa5e => 1
-	i32 3754567612, ; 29: SQLitePCLRaw.provider.e_sqlite3 => 0xdfca27bc => 12
-	i32 3829621856, ; 30: System.Numerics.dll => 0xe4436460 => 6
-	i32 3876362041, ; 31: SQLite-net => 0xe70c9739 => 9
-	i32 3896760992, ; 32: Xamarin.AndroidX.Core.dll => 0xe843daa0 => 7
-	i32 3967165417, ; 33: Xamarin.GooglePlayServices.Location => 0xec7623e9 => 15
-	i32 3970018735, ; 34: Xamarin.GooglePlayServices.Tasks.dll => 0xeca1adaf => 17
-	i32 4105002889, ; 35: Mono.Security.dll => 0xf4ad5f89 => 8
-	i32 4151237749, ; 36: System.Core => 0xf76edc75 => 3
-	i32 4278134329 ; 37: Xamarin.GooglePlayServices.Maps.dll => 0xfeff2639 => 16
+@assembly_image_cache_hashes = local_unnamed_addr constant [50 x i32] [
+	i32 41914562, ; 0: MySql.Data.CF => 0x27f90c2 => 13
+	i32 230752869, ; 1: Microsoft.CSharp.dll => 0xdc10265 => 1
+	i32 321597661, ; 2: System.Numerics => 0x132b30dd => 8
+	i32 442521989, ; 3: Xamarin.Essentials => 0x1a605985 => 19
+	i32 465846621, ; 4: mscorlib => 0x1bc4415d => 3
+	i32 469710990, ; 5: System.dll => 0x1bff388e => 6
+	i32 725851412, ; 6: I18N.West.dll => 0x2b439d14 => 12
+	i32 748832960, ; 7: SQLitePCLRaw.batteries_v2 => 0x2ca248c0 => 16
+	i32 1098259244, ; 8: System => 0x41761b2c => 6
+	i32 1292207520, ; 9: SQLitePCLRaw.core.dll => 0x4d0585a0 => 17
+	i32 1306176955, ; 10: mapwithAPI.dll => 0x4ddaadbb => 24
+	i32 1525031578, ; 11: Python.Runtime.dll => 0x5ae6229a => 14
+	i32 1639515021, ; 12: System.Net.Http.dll => 0x61b9038d => 7
+	i32 1776026572, ; 13: System.Core.dll => 0x69dc03cc => 4
+	i32 1867746548, ; 14: Xamarin.Essentials.dll => 0x6f538cf4 => 19
+	i32 1898885626, ; 15: mapwithAPI => 0x712eb1fa => 24
+	i32 1908813208, ; 16: Xamarin.GooglePlayServices.Basement => 0x71c62d98 => 20
+	i32 2067863569, ; 17: I18N.dll => 0x7b411811 => 11
+	i32 2103459038, ; 18: SQLitePCLRaw.provider.e_sqlite3.dll => 0x7d603cde => 18
+	i32 2149884392, ; 19: Python.Runtime => 0x8024a1e8 => 14
+	i32 2201231467, ; 20: System.Net.Http => 0x8334206b => 7
+	i32 2250011516, ; 21: MySql.Data.CF.dll => 0x861c737c => 13
+	i32 2465273461, ; 22: SQLitePCLRaw.batteries_v2.dll => 0x92f11675 => 16
+	i32 2475788418, ; 23: Java.Interop.dll => 0x93918882 => 0
+	i32 2562349572, ; 24: Microsoft.CSharp => 0x98ba5a04 => 1
+	i32 2581274016, ; 25: I18N.West => 0x99db1da0 => 12
+	i32 2905242038, ; 26: mscorlib.dll => 0xad2a79b6 => 3
+	i32 3017076677, ; 27: Xamarin.GooglePlayServices.Maps => 0xb3d4efc5 => 22
+	i32 3058099980, ; 28: Xamarin.GooglePlayServices.Tasks => 0xb646e70c => 23
+	i32 3204380047, ; 29: System.Data.dll => 0xbefef58f => 5
+	i32 3230466174, ; 30: Xamarin.GooglePlayServices.Basement.dll => 0xc08d007e => 20
+	i32 3247949154, ; 31: Mono.Security => 0xc197c562 => 10
+	i32 3286872994, ; 32: SQLite-net.dll => 0xc3e9b3a2 => 15
+	i32 3317144872, ; 33: System.Data => 0xc5b79d28 => 5
+	i32 3360279109, ; 34: SQLitePCLRaw.core => 0xc849ca45 => 17
+	i32 3362522851, ; 35: Xamarin.AndroidX.Core => 0xc86c06e3 => 9
+	i32 3366347497, ; 36: Java.Interop => 0xc8a662e9 => 0
+	i32 3476120550, ; 37: Mono.Android => 0xcf3163e6 => 2
+	i32 3494395880, ; 38: Xamarin.GooglePlayServices.Location.dll => 0xd0483fe8 => 21
+	i32 3579244613, ; 39: I18N => 0xd556f045 => 11
+	i32 3672681054, ; 40: Mono.Android.dll => 0xdae8aa5e => 2
+	i32 3754567612, ; 41: SQLitePCLRaw.provider.e_sqlite3 => 0xdfca27bc => 18
+	i32 3829621856, ; 42: System.Numerics.dll => 0xe4436460 => 8
+	i32 3876362041, ; 43: SQLite-net => 0xe70c9739 => 15
+	i32 3896760992, ; 44: Xamarin.AndroidX.Core.dll => 0xe843daa0 => 9
+	i32 3967165417, ; 45: Xamarin.GooglePlayServices.Location => 0xec7623e9 => 21
+	i32 3970018735, ; 46: Xamarin.GooglePlayServices.Tasks.dll => 0xeca1adaf => 23
+	i32 4105002889, ; 47: Mono.Security.dll => 0xf4ad5f89 => 10
+	i32 4151237749, ; 48: System.Core => 0xf76edc75 => 4
+	i32 4278134329 ; 49: Xamarin.GooglePlayServices.Maps.dll => 0xfeff2639 => 22
 ], align 4
-@assembly_image_cache_indices = local_unnamed_addr constant [38 x i32] [
-	i32 6, i32 13, i32 2, i32 4, i32 10, i32 4, i32 11, i32 18, ; 0..7
-	i32 5, i32 3, i32 13, i32 18, i32 14, i32 12, i32 5, i32 10, ; 8..15
-	i32 0, i32 2, i32 16, i32 17, i32 14, i32 8, i32 9, i32 11, ; 16..23
-	i32 7, i32 0, i32 1, i32 15, i32 1, i32 12, i32 6, i32 9, ; 24..31
-	i32 7, i32 15, i32 17, i32 8, i32 3, i32 16 ; 32..37
+@assembly_image_cache_indices = local_unnamed_addr constant [50 x i32] [
+	i32 13, i32 1, i32 8, i32 19, i32 3, i32 6, i32 12, i32 16, ; 0..7
+	i32 6, i32 17, i32 24, i32 14, i32 7, i32 4, i32 19, i32 24, ; 8..15
+	i32 20, i32 11, i32 18, i32 14, i32 7, i32 13, i32 16, i32 0, ; 16..23
+	i32 1, i32 12, i32 3, i32 22, i32 23, i32 5, i32 20, i32 10, ; 24..31
+	i32 15, i32 5, i32 17, i32 9, i32 0, i32 2, i32 21, i32 11, ; 32..39
+	i32 2, i32 18, i32 8, i32 15, i32 9, i32 21, i32 23, i32 10, ; 40..47
+	i32 4, i32 22 ; 48..49
 ], align 4
 
 @marshal_methods_number_of_classes = local_unnamed_addr constant i32 0, align 4

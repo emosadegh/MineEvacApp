@@ -26,7 +26,7 @@
         android:layout_marginTop="60dp"
         android:text="Start GPS" />
 
-    <!-- Plot History Button -->
+    <!-- Plot GPS History Button -->
     <Button
         android:id="@+id/btnPlotGpsHistory"
         android:layout_width="wrap_content"
@@ -36,6 +36,19 @@
         android:layout_marginEnd="10dp"
         android:layout_marginTop="8dp"
         android:text=" Plot GPS  " />
+
+
+
+    <!-- upload GPS to AWS Button -->
+    <Button
+        android:id="@+id/btnUploadGpsToAws"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnPlotGpsHistory"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="8dp"
+        android:text="PUSH AWS " />
 
 
 

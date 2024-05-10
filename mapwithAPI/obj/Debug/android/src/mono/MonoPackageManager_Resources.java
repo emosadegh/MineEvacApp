@@ -4,6 +4,8 @@ public class MonoPackageManager_Resources {
 		/* We need to ensure that "mapwithAPI.dll" comes first in this list. */
 		"mapwithAPI.dll",
 		"Xamarin.AndroidX.Core.dll",
+		"MySql.Data.CF.dll",
+		"Python.Runtime.dll",
 		"SQLite-net.dll",
 		"SQLitePCLRaw.batteries_v2.dll",
 		"SQLitePCLRaw.core.dll",
